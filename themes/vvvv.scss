@@ -567,13 +567,13 @@ a.floating-action-button:hover,
   background: var(--gray-shade-4);
 }
 
-// .drawer__inner {
-//   background-color: var(--gray-shade-3);
+.drawer__inner {
+  background-color: var(--gray-shade-3);
 //   background-image: url(https://s3-eu-central-1.amazonaws.com/merveilles/site_uploads/files/000/000/002/original/hero.png);
 //   background-size: 440px;
 //   background-repeat: no-repeat;
 //   background-position: left bottom;
-// }
+}
 
 .drawer__inner.darker {
   background: var(--gray-shade-2);
