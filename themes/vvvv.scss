@@ -36,6 +36,15 @@ body {
   background: var(--gray-shade-2) !important;
 }
 
+.no-list {
+  list-style-type: none !important;
+  li {
+    display: inline-block;
+    margin: 0 5px;
+    list-style: none;
+  }
+}
+
 .ui {
   background: var(--gray-shade-1) !important;
 }
@@ -1421,7 +1430,7 @@ a.status-card:hover {
 
 .public-layout .box-widget a,
 .public-layout .box-widget a:visited {
-  color: var(--cyan);
+  color: var(--black);
 }
 
 .public-layout .box-widget ul {
