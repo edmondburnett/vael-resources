@@ -35,12 +35,12 @@ body {
 
 .button {
   background: var(--cyan)!important;
-  color: var(--gray-shade-3);
+  color: var(--gray-shade-3)!important;
 }
 
 .button:hover {
-  background: var(--cyan);
-  color: var(--gray-shade-e);
+  background: var(--red);
+  color: var(--gray-shade-e)!important;
 }
 
 .app-holder>div {
@@ -1318,7 +1318,7 @@ a.status-card:hover {
 
 .public-layout .box-widget a,
 .public-layout .box-widget a:visited {
-  color: var(--cyan);
+  color: var(--gray-shade-2);
 }
 
 .public-layout .box-widget ul {
@@ -1331,6 +1331,7 @@ a.status-card:hover {
   margin-bottom: 1em;
   padding-left: 1em;
   position: relative;
+  list-style-type: none;
 }
 
 .public-layout .box-widget ul li:after {
