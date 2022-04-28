@@ -11,6 +11,6 @@ Themes, configurations, logos, and other resources related to the vvvv.social ma
 
 # acknowledgements
 
-The VVVV CSS theme has been inspired by and adapted from Merveilles instance:
-- [The-Town repo](https://github.com/merveilles/The-Town)
+The VVVV CSS theme has been inspired by and adapted from Merveilles:
+- [github](https://github.com/merveilles/merveilles-town)
 - [Merveilles.town](https://merveilles.town/)
