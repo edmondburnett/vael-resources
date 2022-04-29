@@ -2,7 +2,7 @@
 
 This will set our theme as the default and the one that is used publicly. Eventually this should be handled by ansible.
 
-Copy `vvvv.scss` to `app/javascript/styles/vvvv.scss`
+Copy `vael.scss` to `app/javascript/styles/vael.scss`
 
 Copy `themes.yml` to `config/themes.yml`
 
