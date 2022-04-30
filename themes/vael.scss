@@ -2243,6 +2243,89 @@ body .muted-hint a {
   margin-top: 3px
 }
 
+
+/* Emoji-mart */
+
+.emoji-mart-bar {
+  background-color: var(--gray-shade-5);
+  border-radius: 0;
+  border-bottom: 0;
+  border-top: 0;
+}
+
+.emoji-mart-anchor-selected,
+.emoji-mart-anchor-selected:hover,
+.emoji-mart-anchor:hover{
+  color: var(--white) !important;
+  transition: .3s
+}
+
+
+.emoji-mart-search input {
+  background-color: var(--gray-shade-5);
+  border-radius: 0 !important;
+  border-bottom: 1px;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-width: 2px;
+  border-color: var(--gray-shade-a);
+  color: var(--white);
+}
+
+.emoji-mart-no-results{
+  color: var(--gray-shade-8);
+}
+
+div.emoji-mart-anchors,
+.emoji-mart-search,
+.emoji-mart-scroll,
+.emoji-mart-category,
+.emoji-mart-category-label,
+.emoji-mart-category-label span:hover,
+.emoji-picker-dropdown__menu{
+  background-color: var(--gray-shade-5) !important;
+  color: var(--white) !important;
+}
+
+
+.emoji-mart-category-label span {
+  background: none !important;
+}
+
+.emoji-picker-dropdown__modifiers__menu {
+  border-radius: 0;
+}
+
+.emoji-mart-emoji span {
+  width: 22px;
+  height: 22px;
+  filter: grayscale(50%);
+}
+
+.emoji-mart-category .emoji-mart-emoji span {
+  filter: grayscale(40%) !important;
+}
+
+
+span.emoji-mart-anchor {
+  color: var(--gray-shade-a);
+}
+
+span.emoji-mart-anchor-bar {
+  background-color: var(---gray-shade-a);
+}
+
+.emoji-mart-category .emoji-mart-emoji:hover::before{
+  background-color: var(--white);
+}
+
+/* emoji appearance*/
+.emojione {
+  filter: grayscale(40%);
+}
+
+
 /* DM styling */
 
 .conversation {
