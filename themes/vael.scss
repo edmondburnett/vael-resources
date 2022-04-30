@@ -1,7 +1,7 @@
 @import "application";
 
 /*
-  CSS theme adapted from Merveilles: https://github.com/merveilles/merveilles-town
+  Vael CSS theme adapted from Merveilles: https://github.com/merveilles/merveilles-town
 */
 
 /*
@@ -800,6 +800,14 @@ a.status-card:hover {
   color: var(--cyan);
 }
 
+.account__header__bio .account__header__fields dt {
+  text-align: left;
+}
+
+.account__header__bio .account__header__fields dd {
+  text-align: left;
+}
+
 .account__header__bar .avatar .account__avatar {
   border: 2px solid var(--gray-shade-4);
 }
@@ -1345,6 +1353,16 @@ a.status-card:hover {
   color: var(--cyan);
 }
 
+.public-layout .public-account-bio .account__header__fields dt
+{
+  text-align: left;
+}
+
+.public-layout .public-account-bio .account__header__fields dd
+{
+  text-align: left;
+}
+
 .activity-stream .entry:first-child .detailed-status,
 .activity-stream .entry:first-child .status,
 .activity-stream .entry:first-child .load-more {
@@ -1430,11 +1448,16 @@ a.status-card:hover {
 
 .public-layout .box-widget a,
 .public-layout .box-widget a:visited {
-  color: var(--black);
+  color: var(--cyan);
+}
+
+.public-layout .box-widget .actions a,
+.public-layout .box-widget .actions a:visited {
+  color: var(--gray-shade-2) !important;
 }
 
 .public-layout .box-widget ul {
-  list-style: none;
+  list-style-type: none;
   margin-left: 0;
 }
 
@@ -1443,6 +1466,7 @@ a.status-card:hover {
   margin-bottom: 1em;
   padding-left: 1em;
   position: relative;
+  color: var(--gray-shade-c);
 }
 
 .public-layout .box-widget ul li::after {
@@ -1464,6 +1488,7 @@ a.status-card:hover {
 .public-layout .box-widget .rich-formatting li,
 .public-layout .box-widget .rich-formatting p {
   color: var(--gray-shade-c);
+  font-size: 16px;
 }
 
 .public-layout .box-widget .rich-formatting h1,
@@ -1526,6 +1551,14 @@ a.status-card:hover {
     color: var(--gray-shade-6);
   }
 }
+
+.public-layout .logged_out_links span {
+  margin-right: 10px;
+}
+
+// .public-layout .rules-list {
+//   background: var(--shade-gray-3);
+// }
 
 /*
   settings sidebar
@@ -1753,6 +1786,10 @@ body .muted-hint a {
 .account__header__content,
 .accounts-table__count small {
   color: var(--gray-shade-9);
+}
+
+.account-card {
+  background: var(--gray-shade-3);
 }
 
 /*
@@ -2188,6 +2225,22 @@ body .muted-hint a {
 .reactions-bar__item__count,
 .reactions-bar .emoji-button {
   color: var(--gray-shade-e);
+}
+
+/* This section replaces Mastodon's default 'joy' emoji-picker icon which is often used aggressively */
+
+.emoji-button img {
+  display: none;
+}
+
+.emoji-button::after {
+  content: "🖤";
+}
+
+.emoji-button {
+  text-decoration: none !important;
+  margin-right: 3px;
+  margin-top: 3px
 }
 
 /* DM styling */
