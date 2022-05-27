@@ -23,6 +23,25 @@ If during `bundle install` while ugrading to the lastest release or reinstalling
 - Proceed with the remainder of the update steps.
 
 
+If during updates, `yarn install` complains about a failure to satisfy `"emoji-mart": "npm:emoji-mart-lazyload"`" then replace that line in package.json with `"emoji-mart": "^3.0.1"`.
+
+
+To update the our fork with upstream:
+
+Make sure we have the upstream remote setup, like:
+
+```
+$ git remote -v
+upstream	git@github.com:mastodon/mastodon.git (fetch)
+upstream	git@github.com:mastodon/mastodon.git (push)
+```
+
+Then:
+
+- `git fetch upstream`
+- `git merge upstream/main main` and fix any conflicts
+
+
 # Email Server
 
 Setting up a new email account in mysql:
