@@ -10,6 +10,13 @@ If you get errors about missing node_modules while rebuilding and compiling asse
 `yarn config set nodeLinker node-modules`
 
 
+If assets precomile hangs forever with 100% CPU usage:
+
+- Delete the yarn.lock file
+- run `yarn install` again
+- Re-run precompile
+
+
 If CSS/resources are 404'ing / not loading after rebuilding:
 
 - Make sure all paths in the nginx config are correct.
