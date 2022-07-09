@@ -33,7 +33,7 @@ If during `bundle install` while ugrading to the lastest release or reinstalling
 If during updates, `yarn install` complains about a failure to satisfy `"emoji-mart": "npm:emoji-mart-lazyload"`" then replace that line in package.json with `"emoji-mart": "^3.0.1"`.
 
 
-To update the our fork with upstream:
+To update our fork with upstream:
 
 Make sure we have the upstream remote setup, like:
 
@@ -63,7 +63,7 @@ Adding a new user/mailbox:
 
 - `select * from virtual_users;`
 - Choose an unused ID
-- `INSERT INTO `mailserver`.`virtual_users` (`id` ,`domain_id`, `password`, `email`) VALUES ('<id>', <domain_id>', '<encrypted password>', '<email/login>');`
+- `INSERT INTO `mailserver`.`virtual_users` (`id` ,`domain_id`, `password`, `email`) VALUES ('<id>', '<domain_id>', '<encrypted password>', '<email/login>');`
 
 Adding an email alias:
 
