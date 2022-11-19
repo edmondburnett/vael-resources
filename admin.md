@@ -22,12 +22,14 @@ If CSS/resources are 404'ing / not loading after rebuilding:
 - Make sure all paths in the nginx config are correct.
 
 
-If during `bundle install` while ugrading to the lastest release or reinstalling, it fails with openssl errors like `An error occurred while installing openssl (2.2.0), and Bundler cannot continue`, this is due to some library version differences with the latest Ubuntu 22.04, vs Ubuntu 20.04 expected by Mastodon's install.
+If during `bundle install` or `rbenv install` (updating Ruby version) while ugrading to the lastest release or reinstalling, it fails with openssl errors like `An error occurred while installing openssl (2.2.0), and Bundler cannot continue`, this is due to some library version differences with the latest Ubuntu 22.04, vs Ubuntu 20.04 expected by Mastodon's install.
 
 - Run `sudo apt install libssl1.0-dev`. This will remove the packages: `libcurl4-openssl-dev libpq-dev libssl-dev`
-- Re-run `bundle install`, it should now complete successfully.
+- Re-run `bundle install` or `rbenv install`, it should now complete successfully.
+- If `bundle install` complains about not being able to install `pg`, then reinstall `libpq-dev` and re-run.
 - Now re-install `libcurl4-openssl-dev libpq-dev libssl-dev` (required by everything else)
 - Proceed with the remainder of the update steps.
+
 
 
 If during updates, `yarn install` complains about a failure to satisfy `"emoji-mart": "npm:emoji-mart-lazyload"`" then replace that line in package.json with `"emoji-mart": "^3.0.1"`.
@@ -43,10 +45,16 @@ upstream	git@github.com:mastodon/mastodon.git (fetch)
 upstream	git@github.com:mastodon/mastodon.git (push)
 ```
 
-Then:
+Then, to merge in straight from main:
 
 - `git fetch upstream`
 - `git merge upstream/main main` and fix any conflicts
+
+To merge from a specific release tag:
+
+- `git fetch upstream`
+- `git merge <tag name>`
+- Fix any merge conflicts.
 
 
 # Email Server
