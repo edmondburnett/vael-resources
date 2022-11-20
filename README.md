@@ -11,5 +11,5 @@ Themes, settings, text copy, logos, and other resources related to the vael.town
 
 # acknowledgements
 
-The vael CSS theme was initially adapted from Merveilles:
+The vael theme was initially adapted from Merveilles (though since has diverged quite a bit):
 - [github](https://github.com/merveilles/merveilles-town)

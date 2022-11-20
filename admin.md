@@ -48,7 +48,8 @@ upstream	git@github.com:mastodon/mastodon.git (push)
 Then, to merge in straight from main:
 
 - `git fetch upstream`
-- `git merge upstream/main main` and fix any conflicts
+- `git merge upstream/main main`
+- Fix any merge conflicts.
 
 To merge from a specific release tag:
 

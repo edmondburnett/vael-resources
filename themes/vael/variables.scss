@@ -1,0 +1,83 @@
+
+// Custom vael colors
+$gray-shade-1: #111;
+$gray-shade-1-5: #1a1a1a;
+$gray-shade-2: #222;
+$gray-shade-3: #333;
+$gray-shade-4: #444;
+$gray-shade-5: #555;
+$gray-shade-6: #666;
+$gray-shade-7: #777;
+$gray-shade-8: #888;
+$gray-shade-9: #999;
+$gray-shade-a: #aaa;
+$gray-shade-c: #ccc;
+$gray-shade-d: #ddd;
+$gray-shade-e: #eee;
+$white: #f6f6f6;
+$cyan: #79dfc4;
+$cyan-2: #84ceba;
+$cyan-light: #b6ffeb;
+$gold: #E5C321;
+$gold-light: #f5db5b;
+
+// Commonly used web colors
+$black: #000000;            // Black
+// $white: #ffffff;            // White
+$success-green: $cyan-2 !default;
+$error-red: #df405a !default;        // Cerise
+$warning-red: #ff5050 !default;      // Sunset Orange
+$gold-star: #ca8f04 !default;        // Dark Goldenrod
+
+$red-bookmark: $warning-red;
+
+// Values from the classic Mastodon UI
+$classic-base-color: $gray-shade-1;
+$classic-primary-color: $gray-shade-c;
+$classic-secondary-color: $gray-shade-d;
+$classic-highlight-color: $cyan;
+
+// Variables for defaults in UI
+$base-shadow-color: $black !default;
+$base-overlay-background: $black !default;
+$base-border-color: $white !default;
+$simple-background-color: $white !default;
+$valid-value-color: $success-green !default;
+$error-value-color: $error-red !default;
+
+// Tell UI to use selected colors
+$ui-base-color: $classic-base-color !default;                  // Darkest
+$ui-base-lighter-color: lighten($ui-base-color, 26%) !default; // Lighter darkest
+$ui-primary-color: $classic-primary-color !default;            // Lighter
+$ui-secondary-color: $classic-secondary-color !default;        // Lightest
+$ui-highlight-color: $classic-highlight-color !default;
+
+// Variables for texts
+$primary-text-color: $white !default;
+$darker-text-color: $ui-primary-color !default;
+$dark-text-color: $ui-base-lighter-color !default;
+$secondary-text-color: $ui-secondary-color !default;
+$highlight-text-color: lighten($ui-highlight-color, 8%) !default;
+$action-button-color: $ui-base-lighter-color !default;
+$passive-text-color: $gold-star !default;
+$active-passive-text-color: $success-green !default;
+
+// For texts on inverted backgrounds
+$inverted-text-color: $ui-base-color !default;
+$lighter-text-color: $ui-base-lighter-color !default;
+$light-text-color: $ui-primary-color !default;
+
+// Language codes that uses CJK fonts
+$cjk-langs: ja, ko, zh-CN, zh-HK, zh-TW;
+
+// Variables for components
+$media-modal-media-max-width: 100%;
+
+// put margins on top and bottom of image to avoid the screen covered by image.
+$media-modal-media-max-height: 80%;
+
+$no-gap-breakpoint: 1175px;
+
+$font-sans-serif: 'mastodon-font-sans-serif' !default;
+$font-display: 'mastodon-font-display' !default;
+$font-monospace: 'mastodon-font-monospace' !default;
