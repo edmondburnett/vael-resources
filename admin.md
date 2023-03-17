@@ -22,7 +22,7 @@ If CSS/resources are 404'ing / not loading after rebuilding:
 - Make sure all paths in the nginx config are correct.
 
 
-If during `bundle install` or `rbenv install` (updating Ruby version) while ugrading to the lastest release or reinstalling, it fails with openssl errors like `An error occurred while installing openssl (2.2.0), and Bundler cannot continue`, this is due to some library version differences with the latest Ubuntu 22.04, vs Ubuntu 20.04 expected by Mastodon's install.
+If during `bundle install` or `rbenv install` (updating Ruby version) while ugrading to the lastest release or reinstalling, it fails with openssl errors like `An error occurred while installing openssl (2.2.0), and Bundler cannot continue`, or that Ruby must be recompiled with OpenSSL:
 
 - Run `sudo apt install libssl1.0-dev`. This will remove the packages: `libcurl4-openssl-dev libpq-dev libssl-dev`
 - Re-run `bundle install` or `rbenv install`, it should now complete successfully.
