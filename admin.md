@@ -1,28 +1,28 @@
 # Tech/Admin notes
 
-Rebuilding CSS, HTML, text assets:
+### Rebuilding CSS, HTML, text assets:
 
 `RAILS_ENV=production bundle exec rake assets:precompile && sudo systemctl restart mastodon-web`
 
 
-If you get errors about missing node_modules while rebuilding and compiling assets, from the project dir do:
+### If you get errors about missing node_modules while rebuilding and compiling assets, from the project dir do:
 
 `yarn config set nodeLinker node-modules`
 
 
-If assets precomile hangs forever with 100% CPU usage:
+### If assets precomile hangs forever with 100% CPU usage:
 
 - Delete the yarn.lock file
 - run `yarn install` again
 - Re-run precompile
 
 
-If CSS/resources are 404'ing / not loading after rebuilding:
+### If CSS/resources are 404'ing / not loading after rebuilding:
 
 - Make sure all paths in the nginx config are correct.
 
 
-If during `bundle install` or `rbenv install` (updating Ruby version) while ugrading to the lastest release or reinstalling, it fails with openssl errors like `An error occurred while installing openssl (2.2.0), and Bundler cannot continue`, or that Ruby must be recompiled with OpenSSL:
+### If during `bundle install` or `rbenv install` (updating Ruby version) while ugrading to the lastest release or reinstalling, it fails with openssl errors like `An error occurred while installing openssl (2.2.0), and Bundler cannot continue`, or that Ruby must be recompiled with OpenSSL:
 
 - Run `sudo apt install libssl1.0-dev`. This will remove the packages: `libcurl4-openssl-dev libpq-dev libssl-dev`
 - Re-run `bundle install` or `rbenv install`, it should now complete successfully.
@@ -32,10 +32,12 @@ If during `bundle install` or `rbenv install` (updating Ruby version) while ugra
 
 
 
-If during updates, `yarn install` complains about a failure to satisfy `"emoji-mart": "npm:emoji-mart-lazyload"`" then replace that line in package.json with `"emoji-mart": "^3.0.1"`.
+### If during updates, `yarn install` complains about a failure to satisfy `"emoji-mart": "npm:emoji-mart-lazyload"`" then: 
+
+Replace that line in package.json with `"emoji-mart": "^3.0.1"`.
 
 
-To update our fork with upstream:
+### To update our fork with upstream:
 
 Make sure we have the upstream remote setup, like:
 
@@ -58,23 +60,23 @@ To merge from a specific release tag:
 - Fix any merge conflicts.
 
 
-# Email Server
+## Email Server
 
 Setting up a new email account in mysql:
 
-Adding a new domain name:
+### Adding a new domain name:
 
 - `select * from virtual_domains;`
 - If adding a new domain name, choose an unused ID
 - `INSERT INTO `mailserver`.`virtual_domains` (`id` ,`name`) VALUES ('<id>', '<domain name>');`
 
-Adding a new user/mailbox:
+### Adding a new user/mailbox:
 
 - `select * from virtual_users;`
 - Choose an unused ID
 - `INSERT INTO `mailserver`.`virtual_users` (`id` ,`domain_id`, `password`, `email`) VALUES ('<id>', '<domain_id>', '<encrypted password>', '<email/login>');`
 
-Adding an email alias:
+### Adding an email alias:
 
 - `select * from virtual_aliases;`
 - Choose an unused ID
