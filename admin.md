@@ -60,6 +60,12 @@ To merge from a specific release tag:
 - Fix any merge conflicts.
 
 
+## Updating Ruby version
+
+- Pull the latest versions available with `git -C "$(rbenv root)"/plugins/ruby-build pull` in the vael project directory.
+- Updated with `RUBY_CONFIGURE_OPTS=--with-jemalloc rbenv install` or whatever command the release notes tells you to use.
+
+
 ## Email Server
 
 Setting up a new email account in mysql:
