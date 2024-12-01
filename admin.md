@@ -59,6 +59,13 @@ To merge from a specific release tag:
 - `git merge <tag name>`
 - Fix any merge conflicts.
 
+For major or minor version releases (4.X.X) you probably want to checkout the full codebase so that merging doesn't miss
+anything. You can do a checkout that pulls in the desired tag into your current branch. Then make note of any customized
+files that are replaced and fix/restore those changes.
+
+- `git fetch upstream`
+- `git checkout <tag> ./`
+
 
 ## Updating Ruby version
 
@@ -78,6 +85,7 @@ Setting up a new email account in mysql:
 
 ### Adding a new user/mailbox:
 
+- Create a new encrypted password with `sudo doveadm pw -s SHA512-CRYPT`
 - `select * from virtual_users;`
 - Choose an unused ID
 - `INSERT INTO `mailserver`.`virtual_users` (`id` ,`domain_id`, `password`, `email`) VALUES ('<id>', '<domain_id>', '<encrypted password>', '<email/login>');`
