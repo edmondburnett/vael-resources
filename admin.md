@@ -66,26 +66,3 @@ note of any customized files that are replaced and fix/restore those changes.
   directory.
 - Updated with `RUBY_CONFIGURE_OPTS=--with-jemalloc rbenv install` or `rbenv install <version>` or whatever
   command the release notes tells you to use.
-
-## Email Server
-
-Setting up a new email account in mysql:
-
-### Adding a new domain name:
-
-- `select * from virtual_domains;`
-- If adding a new domain name, choose an unused ID
-- `INSERT INTO`mailserver`.`virtual_domains`(`id`,`name`) VALUES ('<id>', '<domain name>');`
-
-### Adding a new user/mailbox:
-
-- Create a new encrypted password with `sudo doveadm pw -s SHA512-CRYPT`
-- `select * from virtual_users;`
-- Choose an unused ID
-- `INSERT INTO`mailserver`.`virtual_users`(`id`,`domain_id`,`password`,`email`) VALUES ('<id>', '<domain_id>', '<encrypted password>', '<email/login>');`
-
-### Adding an email alias:
-
-- `select * from virtual_aliases;`
-- Choose an unused ID
-- `INSERT INTO`mailserver`.`virtual_aliases`(`id`,`domain_id`,`source`,`destination`) VALUES ('<id>', '<domain_id>', '<new alias email address>', '<existing mailbox email address>');`
