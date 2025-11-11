@@ -18,10 +18,14 @@
 
 - Make sure all paths in the nginx config are correct.
 
-### If during `bundle install` or `rbenv install` (updating Ruby version) while ugrading to the lastest release or reinstalling, it fails with openssl errors like `An error occurred while installing openssl (2.2.0), and Bundler cannot continue`, or that Ruby must be recompiled with OpenSSL:
+### SSL Errors
 
-- Run `sudo apt install libssl1.0-dev`. This will remove the packages:
-  `libcurl4-openssl-dev libpq-dev libssl-dev`
+If during `bundle install` or `rbenv install` (updating Ruby version) while ugrading to the lastest release or
+reinstalling, it fails with openssl errors like
+`An error occurred while installing openssl (2.2.0), and Bundler cannot continue`, or that Ruby must be recompiled with
+OpenSSL:
+
+- Run `sudo apt install libssl1.0-dev`. This will remove the packages: `libcurl4-openssl-dev libpq-dev libssl-dev`
 - Re-run `bundle install` or `rbenv install`, it should now complete successfully.
 - If `bundle install` complains about not being able to install `pg`, then reinstall `libpq-dev` and re-run.
 - Now re-install `libcurl4-openssl-dev libpq-dev libssl-dev` (required by everything else)
@@ -53,13 +57,14 @@ To merge from a specific release tag:
 - `git merge <tag name>`
 - Fix any merge conflicts.
 
-For major or minor version releases (4.X.X) you probably want to checkout the full codebase so that merging
-doesn't miss anything. You can do a checkout that pulls in the desired tag into your current branch. Then make
-note of any customized files that are replaced and fix/restore those changes.
+For major or minor version releases (4.X.X) you probably want to checkout the full codebase so that merging doesn't miss
+anything. You can do a checkout that pulls in the desired tag into your current branch. Then make note of any customized
+files that are replaced and fix/restore those changes.
 
-Something that has worked in the past is to do a merge as above first, then do this checkout, then look at `git status`
-and see which files are then modified by the checkout, which shows you your changes that are being overwritten + some
-other stuff that merging misses. Then copy back your changes from a backup or previous commit (logo images etc).
+Something that has worked in the past is to do a merge as above first, then commit the merge, then do this checkout,
+then look at `git status` and see which files are then modified by the checkout, which shows you your changes that are
+being overwritten + some other stuff that merging misses. Then copy back your changes from a backup or previous commit
+(logo images etc).
 
 - `git fetch upstream`
 - `git checkout <tag> ./`
@@ -68,5 +73,5 @@ other stuff that merging misses. Then copy back your changes from a backup or pr
 
 - Pull the latest versions available with `git -C "$(rbenv root)"/plugins/ruby-build pull` in the vael project
   directory.
-- Updated with `RUBY_CONFIGURE_OPTS=--with-jemalloc rbenv install` or `rbenv install <version>` or whatever
-  command the release notes tells you to use.
+- Updated with `RUBY_CONFIGURE_OPTS=--with-jemalloc rbenv install` or `rbenv install <version>` or whatever command the
+  release notes tells you to use.
