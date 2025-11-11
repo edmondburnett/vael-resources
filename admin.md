@@ -57,6 +57,10 @@ For major or minor version releases (4.X.X) you probably want to checkout the fu
 doesn't miss anything. You can do a checkout that pulls in the desired tag into your current branch. Then make
 note of any customized files that are replaced and fix/restore those changes.
 
+Something that has worked in the past is to do a merge as above first, then do this checkout, then look at `git status`
+and see which files are then modified by the checkout, which shows you your changes that are being overwritten + some
+other stuff that merging misses. Then copy back your changes from a backup or previous commit (logo images etc).
+
 - `git fetch upstream`
 - `git checkout <tag> ./`
 
